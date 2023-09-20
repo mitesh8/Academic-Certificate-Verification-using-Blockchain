@@ -5,6 +5,7 @@
 The proposed solution consists of a web app which will have an interface for
 registration and verification of certificate along with a private blockchain in the
 backend which will be used to store and verify certificates.
+![image](https://github.com/mitesh8/Academic-Certificate-Verification-using-Blockchain/assets/121756829/87719a28-f4ec-431b-b5ae-e0728959dfab)
 
 In a blockchain-based system for verifying educational certificates, there are 
 typically three main actors involved: the Admin (Certificate Issuer), the Student 
@@ -29,6 +30,7 @@ access to the Certificate Holder's certificate and can use the blockchain to ver
 authenticity and accuracy. By verifying the certificate on the blockchain, the Verifier 
 can be confident that the certificate is genuine and has not been tampered.
 
+![image](https://github.com/mitesh8/Academic-Certificate-Verification-using-Blockchain/assets/121756829/85c83d6e-a092-4673-993a-6b965c7cbcf2)
 
 Following will be the working process of the system. 
 1) University grants a degree certificate and enters the student’s data into the 
@@ -39,3 +41,7 @@ value for the certificate.
 3) The companies check e-certificates details to website and match to existing hash 
 value. If the Hash value matches, then all e- certificates are valid else there may 
 be document forgery might be carried out.
+
+
+![image](https://github.com/mitesh8/Academic-Certificate-Verification-using-Blockchain/assets/121756829/2180a16f-6227-4abb-a9a8-322b2a6ab5e6)
+
