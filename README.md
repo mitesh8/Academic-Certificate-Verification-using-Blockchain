@@ -1,2 +1,30 @@
 # Academic Certificate Verification System Using Blockchain
  Academic Certificate Verification System Using Blockchain
+
+
+The proposed solution consists of a web app which will have an interface for
+registration and verification of certificate along with a private blockchain in the
+backend which will be used to store and verify certificates.
+
+In a blockchain-based system for verifying educational certificates, there are 
+typically three main actors involved: the Admin (Certificate Issuer), the Student 
+(Certificate Holder), and the Verifier.
+The Certificate Issuer, also known as the Admin, is responsible for creating and 
+issuing the certificates on the blockchain. This actor is typically a trusted authority, 
+such as a university or educational institution, that has the authority to issue certificates 
+to students upon completion of their studies. The Admin creates a digital record of the 
+certificate on the blockchain, which includes important details such as the student's 
+30
+name, the name of the institution, the date of issuance, and other relevant information. 
+Once the certificate is issued on the blockchain, it becomes a permanent and tamperproof record.
+The Certificate Holder, or the Student, is the individual who holds the certificate 
+and wishes to share it with others for verification purposes. This actor is responsible for 
+providing access to their certificate when requested by a Verifier. The Certificate 
+Holder typically has control over their certificate and can choose who has access to it 
+and for what purposes.
+Finally, the Verifier is the party responsible for verifying the authenticity and 
+validity of the certificate. This actor can be an employer, a regulatory body, or any other 
+entity that requires verification of educational credentials. The Verifier can request 
+access to the Certificate Holder's certificate and can use the blockchain to verify its 
+authenticity and accuracy. By verifying the certificate on the blockchain, the Verifier 
+can be confident that the certificate is genuine and has not been tampered with
