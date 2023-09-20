@@ -27,4 +27,15 @@ validity of the certificate. This actor can be an employer, a regulatory body, o
 entity that requires verification of educational credentials. The Verifier can request 
 access to the Certificate Holder's certificate and can use the blockchain to verify its 
 authenticity and accuracy. By verifying the certificate on the blockchain, the Verifier 
-can be confident that the certificate is genuine and has not been tampered with
+can be confident that the certificate is genuine and has not been tampered.
+
+
+Following will be the working process of the system. 
+1) University grants a degree certificate and enters the student’s data into the 
+system. Next, the system automatically generates block form blockchain by 
+adding hash of the certificate or it can be a collection of certificates.
+2) The certificate hash is generated then email is sent to student containing hash 
+value for the certificate.
+3) The companies check e-certificates details to website and match to existing hash 
+value. If the Hash value matches, then all e- certificates are valid else there may 
+be document forgery might be carried out.
