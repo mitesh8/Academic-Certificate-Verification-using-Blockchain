@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B12</title>
+    <link rel="icon" type="image/png" href="/Images/logo.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/alphardex/aqua.css@master/dist/aqua.min.css'>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+  overflow-x: hidden;
+  background: #fff;
+  min-height: 100vh;
+}
+
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo
+{
+  color: #112434;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.navigation
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.navigation li
+{
+  list-style: none;
+}
+
+.navigation li a
+{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #112434;
+  border-radius: 20px;
+}
+
+.navigation li a:hover ,
+.navigation li a.active
+{
+  background: #112434;
+  color: #fff;
+}
+
+/* Footer */
+html {
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100%;
+    margin: 0;
+    padding-bottom: 50px; /* Adjust to the height of your footer */
+    box-sizing: border-box;
+  }
+
+  .footer p {
+    margin: 0;
+    color: #ffffff; /* Change to the desired text color */
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Adjust to the height of your footer */
+    background-color: #000000;
+    border-top: 1px solid #000000;
+  }
+
+  .footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .footer p {
+    margin: 0;
+  }
+    </style>
+
+
+
+
+    <style>
+        form label {
+            color: white;
+        }
+
+        form {
+            background-color: #333333;
+            max-width: 500px;
+            margin: 0 auto 100px;
+            margin-top: 100px;
+            border: 2px solid #ccc;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+
+        /* Button */
+        .btn {
+            padding: 8px 20px;
+            border-radius: 0;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, var(--primary-color), transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+        }
+
+        .btn:hover {
+            background: transparent;
+            box-shadow: 0 0 20px 10px rgba(51, 152, 219, 0.5);
+        }
+
+        .btn:hover::before {
+            transform: translateX(100%);
+        }
+
+        .form-input-material {
+            --input-default-border-color: white;
+            --input-border-bottom-color: white;
+        }
+
+        .form-input-material input {
+            color: white;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 40px;
+            color: white;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109), 0 1px 1px rgba(128, 128, 128, 0.155), 0 2.1px 2.1px rgba(128, 128, 128, 0.195), 0 4.4px 4.4px rgba(128, 128, 128, 0.241), 0 12px 12px rgba(128, 128, 128, 0.35);
+        }
+
+        .login-form h1 {
+            margin: 0 0 24px 0;
+        }
+
+        .login-form .form-input-material {
+            margin: 12px 0;
+        }
+
+        .login-form .btn {
+            width: 100%;
+            margin: 18px 0 9px 0;
+        }
+
+        form button[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            width: 250px;
+            height: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">College</a>
+        <ul class="navigation">
+            <li><a href="http://127.0.0.1:5000/">Home</a></li>
+            <li><a href="http://127.0.0.1:5000/AboutUs">About</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="http://127.0.0.1:5000/ContactUs">Contact</a></li>
+        </ul>
+    </header>
+
+
+    <form action="http://127.0.0.1:5000/addproduct" method="post">
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" placeholder="Ex. Computer Technology" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" maxlength="50"required>
+
+        <label for="batch">Batch Year:</label>
+        <input type="year" id="batch" name="batch" maxlength="4" placeholder="Ex. 2016" required>
+
+        <label for="id">Registration Number:</label>
+        <input type="text" id="id" name="id" placeholder="Ex. 16010100" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" >
+
+        <label for="cgpa">CGPA:</label>
+        <input type="number" step="0.1" id="cgpa" name="cgpa" placeholder="10 POINT CGPA" required>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="grade" placeholder="19010479@ycce.in" required>
+
+        <label for="college">College:</label>
+        <input type="text" id="college" name="type" placeholder="YCCE, Nagpur" required>
+
+
+
+        <button type="submit" name="submit" class="btn btn-primary btn-ghost">Submit</button>
+        <input type="date" name="passdate" value="" hidden/>
+    </form>
+
+
+
+    <section class="footer">
+        <!-- Footer content goes here -->
+        <div class="container">
+            <p align="center">&copy; B-12 Final Year Computer Technology</p>
+        </div>
+    </section>
+</body>
+
+</html>

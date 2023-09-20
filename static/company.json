@@ -1,0 +1,23 @@
+[
+    {
+        "companyname": "IBM",
+        "nameofverifier": "HR",
+        "studentname": "Ahefaz Sheikh",
+        "semail": "19010423@ycce.in",
+        "purpose": "Hiring for SDE"
+    },
+    {
+        "companyname": "Persistent",
+        "nameofverifier": "Associate",
+        "studentname": "Nayan Gaulkar",
+        "semail": "miteshdhanore8@gmail.com",
+        "purpose": "Hiring for SDE"
+    },
+    {
+        "companyname": "Samsung",
+        "nameofverifier": "Kishor Kumar",
+        "studentname": "Mitesh Dhanore",
+        "semail": "miteshdhanore8@gmail.com",
+        "purpose": "Hiring"
+    }
+]

@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.18.4"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B12</title>
+  <link rel="icon" type="image/png" href="/static/logo.png">
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body
+{
+  overflow-x: hidden;
+  background: #fff;
+  min-height: 100vh;
+}
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.logo
+{
+  color: #112434;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+.navigation
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.navigation li
+{
+  list-style: none;
+}
+.navigation li a
+{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #112434;
+  border-radius: 20px;
+}
+
+
+.navigation li a:hover ,
+.navigation li a.active
+{
+  background: #112434;
+  color: #fff;
+}
+
+.parallax
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 0 10px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #0077cc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0059b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  background-color: #004080;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 16px;
+  }
+}
+
+.welcome {
+  text-align: center;
+  padding: 100px 10;
+}
+
+.welcome h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.welcome p {
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.parallax {
+  /* background-image: url('/Glowing Login Form/parallax_image.jpg'); */
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.btn img {
+  height: 30px;
+  width: auto;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: logo-animation 2s infinite;
+}
+
+.btn span {
+
+
+  padding-left: 40px;
+}
+
+.btn-text {
+  text-align: center;
+}
+
+.btn-text p {
+  color: #999;
+  font-size: 14px;
+  margin: 0;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.btn img {
+  height: 30px;
+  width: auto;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: logo-animation 2s infinite;
+}
+
+.btn span {
+  padding-left: 40px;
+}
+
+.btn.student img {
+  animation-name: student-logo-animation;
+}
+
+.btn.college img {
+  animation-name: college-logo-animation;
+}
+
+.btn.verifier img {
+  animation-name: verifier-logo-animation;
+}
+
+@keyframes logo-animation {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes student-logo-animation {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes college-logo-animation {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes verifier-logo-animation {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Footer */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding-bottom: 50px; /* Adjust to the height of your footer */
+  box-sizing: border-box;
+}
+
+.footer p {
+  margin: 0;
+  color: #ffffff; /* Change to the desired text color */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* Adjust to the height of your footer */
+  background-color: #000000;
+  border-top: 1px solid #000000;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.footer p {
+  margin: 0;
+}
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <a href="http://127.0.0.1:5000/" class="logo"   >College</a>
+  <ul class="navigation">
+    <li><a href="http://127.0.0.1:5000/">Home</a></li>
+    <li><a href="http://127.0.0.1:5000/AboutUs">About</a></li>
+    <li><a href="#">Events</a></li>
+    <li><a href="http://127.0.0.1:5000/ContactUs">Contact</a></li>
+  </ul>
+</header>
+  <section class="parallax">
+    <section class="welcome">
+
+      <h1>Welcome Student!!</h1>
+      <p> <span style="color:grey;">QR code and Hash Key are two options
+        provided by College on your email for verifying the
+        authenticity of a certificate. The QR code option involves scanning
+        a code with a QR code reader, while the Hash Key option involves
+        entering a unique code provided on the certificate. Both options lead
+         to the same page, displaying the details of the certificate and
+         confirming its authenticity. Our verification portal is committed
+         to providing a secure and reliable way to verify certificates,
+         while ensuring the highest level of privacy and data protection.</span></p>
+    </section>
+    <br>
+<!--    <h1-->
+<!--      style="text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #45cf63, 0 0 40px #23b23e, 0 0 50px #19d535, 0 0 60px #10f467, 0 0 70px #030906;">-->
+<!--      LOGIN HERE</h1>-->
+      <div class="button-container">
+        <div class="button-wrapper">
+          <a href="http://127.0.0.1:5000/verify/enter" class="btn student">
+            
+            <img src="https://th.bing.com/th/id/OIP.28IWve1Pqv7o7-ZusPN9iwHaHa?pid=ImgDet&rs=1" alt="Student Logo">
+
+            <span><input type="file" id="fileInput" accept=".png, .jpg, .jpeg" /></span>
+          </a>
+          <div class="btn-text">
+            <p >For QR Verification</p>
+            <p>
+                <br><button onclick="readQR()" class="btn student">Read QR Code</button>
+            </p>
+
+          </div>
+        </div>
+
+
+      <div class="button-wrapper">
+        <a href="http://127.0.0.1:5000/verify/enter" class="btn verifier">
+          <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQGzniwY4HcPTw/company-logo_200_200/0?e=2159024400&v=beta&t=Ff8X71EYwsoGwcUpWXSocQPFEOwBHvFC6BUSryI4SqU" alt="Verifier Logo">
+          <span>Hash Value</span>
+        </a>
+        <div class="btn-text">
+          <p>For Hash Value Verification</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+    <!-- Footer content goes here -->
+    <div class="container">
+      <p align="center">&copy; B-12 Final Year Computer Technology</p>
+    </div>
+  </section>
+
+
+  <script>
+    const toggleMenu = () => document.body.classList.toggle("open");
+      async function readQR() {
+        // Get the input file element
+        const input = document.getElementById("fileInput");
+
+        // Get the selected file
+        const file = input.files[0];
+
+        // Create a new image object and set its source to the selected file
+        const img = new Image();
+        img.src = URL.createObjectURL(file);
+
+        // Wait for the image to load
+        await new Promise((resolve) => {
+          img.onload = resolve;
+        });
+
+        // Create a new instance of the QR code reader
+        const codeReader = new ZXing.BrowserQRCodeReader();
+
+        // Decode the QR code from the image
+        const result = await codeReader.decodeFromImage(img);
+
+        // Redirect to the URL encoded in the QR code
+        window.location.href = result.text;
+      }
+    </script>
+
+
+
+
+</body>
+
+</html>

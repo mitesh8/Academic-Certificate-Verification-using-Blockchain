@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ADMIN - Certificate-Verifier</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+
+
+
+
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      outline: none;
+      appearance: none;
+      border-style: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+      background-color: #fff;
+      color: #333;
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+  <style>
+    body,
+    h1 {
+      font-family: "Raleway", sans-serif
+    }
+
+    body,
+    html {
+      height: 100%
+    }
+
+    .bgimg {
+      /* background-image: url('https://www.ibm.com/blogs/blockchain/wp-content/uploads/2019/12/Retina_Display-758591537.jpg'); */
+      background-color: #ffffff;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .jumbo {
+      font-size: 6vw;
+    }
+
+    .pumbo {
+      font-size: 1.5vw;
+    }
+
+    a:hover {
+      color: red;
+    }
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body 
+{
+  overflow-x: hidden;
+  background: #fff;
+  min-height: 100vh;
+}
+
+header 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo 
+{
+  color: #112434;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.navigation 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.navigation li 
+{
+  list-style: none;
+}
+
+.navigation li a 
+{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #112434;
+  border-radius: 20px;
+}
+
+.navigation li a:hover ,
+.navigation li a.active
+{
+  background: #112434;
+  color: #fff;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding-bottom: 50px; /* Adjust to the height of your footer */
+  box-sizing: border-box;
+}
+
+.footer p {
+  margin: 0;
+  color: #ffffff; /* Change to the desired text color */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px; /* Adjust to the height of your footer */
+  background-color: #000000;
+  border-top: 1px solid #000000;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.footer p {
+  margin: 0;
+}
+  </style>
+</head>
+
+
+
+
+
+<!-- <body>
+  <nav>
+      <h2 style="color: white;">College</h2>
+      <ul>
+          <li><a href="http://127.0.0.1:5000/">Home</a></li>
+          <li><a href="https://chrome.google.com/webstore/detail/qr-code-reader-for-google/gmloihcgbhbonllenincdakeijmikcne?hl=en-US">QR-Scanner</a></li>
+          <li><a href="http://127.0.0.1:5000/AboutUs">About Us</a></li>
+          <li><a href="http://127.0.0.1:5000/ContactUs">Contact Us</a></li>
+      </ul>
+  </nav>
+</body> -->
+
+
+
+
+
+
+<body>
+
+
+  <header>
+		<a href="http://127.0.0.1:5000/" class="logo">College</a>
+		<ul class="navigation">
+		  <li><a href="http://127.0.0.1:5000/">Home</a></li>
+		  <li><a href="http://127.0.0.1:5000/AboutUs">About</a></li>
+		  <li><a href="#">Events</a></li>
+		  <li><a href="http://127.0.0.1:5000/ContactUs">Contact</a></li>
+		</ul>
+	  </header>
+
+
+
+  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+
+    <div class="w3-display-topleft w3-padding-large w3-xlarge">
+      <!-- Blockchain-Certificate-Verifier -->
+    </div>
+
+    <div class="w3-display-middle" align="center" style="color: #000000;">
+      <h1 align="center">Welcome to Blockchain Certificate Verifier</h1>
+      <h3><a href="http://127.0.0.1:5000/verifyNodes">Verify Blockchain</a></h3>
+
+      {% for message in get_flashed_messages() %}
+      {% if message == "All Nodes of Blockchain are valid" %}
+      <div class="alert alert-success">
+        {% else %}
+        <div class="alert alert-danger">
+          {% endif %}
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          {{ message }}
+        </div>
+        {% endfor %}
+
+      </div>
+
+      <div class="w3-display-bottomleft w3-padding-large">
+        <!-- Certificate Verification: A Blockchain-Based Approach      </div> -->
+
+    </div>
+    <section class="footer">
+      <!-- Footer content goes here -->
+      <div class="container">
+        <p align="center">&copy; B-12 Final Year Computer Technology</p>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>
